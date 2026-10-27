@@ -131,5 +131,13 @@ This project is open-source and available under the [MIT License](LICENSE). Feel
 
 ---
 
-*Made with following clean Web Standards and W3Schools Tutorials.*
-*Made by Marufur Rahman Reshat.*
+## 👨‍💻 Author
+
+**Marufur Rahman Reshat**  
+*Frontend Web Developer & Project Creator*  
+- **Email**: [marufreshat10@gmail.com](mailto:marufreshat10@gmail.com)
+
+---
+
+*Developed with dedication by **Marufur Rahman Reshat** following clean Web Standards and W3Schools Tutorials.*
+
