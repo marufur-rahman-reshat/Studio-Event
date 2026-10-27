@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Event Management System</title>
+  <!-- W3Schools Standard External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Banner -->
+  <header class="header">
+    <h1>Event Management System</h1>
+    <p>Your complete solution for planning, organizing, and celebrating unforgettable events</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a class="active" href="home.html">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#events">Upcoming Events</a></li>
+      <li><a href="Regcustomer.html">Customer Register</a></li>
+      <li><a href="OrgRegistration.html">Organizer Register</a></li>
+      <li><a href="ManagerReg.html">Manager Register</a></li>
+      <li><a href="admin.html">Admin Register</a></li>
+      <li class="right"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Welcome Card -->
+    <section class="card">
+      <h2>Welcome to the Event Management System</h2>
+      <p>
+        Whether you are planning an international corporate conference, a dream wedding, a charity concert,
+        or a community festival, our platform brings attendees, organizers, facility managers, and administrators together in one unified workspace.
+      </p>
+
+      <div class="notice">
+        <strong>Beginner Web Development Note:</strong> This multi-page website demonstrates core HTML5 elements, 
+        semantic document structuring, tabular data display, and accessible forms styled with clean, readable W3Schools standard CSS.
+      </div>
+
+      <div class="row">
+        <div class="col-50">
+          <h3>Are You an Attendee?</h3>
+          <p>Discover exciting local and global events, book tickets instantly, and manage your registrations with ease.</p>
+          <a href="Regcustomer.html" class="btn-green">Register as Customer</a>
+        </div>
+        <div class="col-50-last">
+          <h3>Are You an Event Host?</h3>
+          <p>Publish events, manage ticket inventories, track attendees, and collaborate with certified event managers.</p>
+          <a href="OrgRegistration.html" class="btn-secondary">Register as Organizer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="card">
+      <h2>Our Event Services</h2>
+      <p>We provide end-to-end event planning, technical logistics, and venue management tools.</p>
+
+      <div class="row">
+        <div class="col-50">
+          <div class="service-box">
+            <h3>1. Corporate & Business Conferences</h3>
+            <p>Annual general meetings, product launch summits, executive seminars, and hackathons with full audio/visual and badge printing support.</p>
+            <p class="text-muted">Features: Keynote staging, live stream feeds, attendee credentials.</p>
+          </div>
+        </div>
+
+        <div class="col-50-last">
+          <div class="service-box">
+            <h3>2. Weddings & Private Celebrations</h3>
+            <p>Full wedding choreography, anniversary banquets, private dinners, and birthday celebrations with dedicated hospitality coordinators.</p>
+            <p class="text-muted">Features: Catering tasting, seating layout design, decor coordination.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-50">
+          <div class="service-box">
+            <h3>3. Concerts & Cultural Festivals</h3>
+            <p>Stadium concerts, indie music festivals, comedy nights, and theatrical productions with high-capacity crowd control and ticketing gates.</p>
+            <p class="text-muted">Features: Gate scanners, multi-tier VIP zones, artist hospitality.</p>
+          </div>
+        </div>
+
+        <div class="col-50-last">
+          <div class="service-box">
+            <h3>4. Venue & Equipment Management</h3>
+            <p>Reserve certified banquet halls, outdoor amphitheaters, staging trusses, LED video walls, and professional sound systems.</p>
+            <p class="text-muted">Features: Inventory tracking, logistics crew, emergency safety backup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Table -->
+    <section id="events" class="card">
+      <h2>Featured Upcoming Events</h2>
+      <p>Browse some of our scheduled events hosted through the system:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Event ID</th>
+            <th>Event Name</th>
+            <th>Category</th>
+            <th>Date & Time</th>
+            <th>Venue Location</th>
+            <th>Capacity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>EVT-101</td>
+            <td>Global Tech Summit 2026</td>
+            <td>Technology</td>
+            <td>Nov 15, 2026 - 09:00 AM</td>
+            <td>Grand Tech Convention Center</td>
+            <td>1,500 Attendees</td>
+            <td><a href="login.html" class="link-green">Book Seat</a></td>
+          </tr>
+          <tr>
+            <td>EVT-102</td>
+            <td>Annual Symphony & Jazz Gala</td>
+            <td>Music & Arts</td>
+            <td>Nov 22, 2026 - 07:00 PM</td>
+            <td>Metropolitan Opera Hall</td>
+            <td>850 Attendees</td>
+            <td><a href="login.html" class="link-green">Book Seat</a></td>
+          </tr>
+          <tr>
+            <td>EVT-103</td>
+            <td>International Food & Wine Expo</td>
+            <td>Culinary Festival</td>
+            <td>Dec 05, 2026 - 11:00 AM</td>
+            <td>Riverside Pavilions</td>
+            <td>3,000 Attendees</td>
+            <td><a href="login.html" class="link-green">Book Seat</a></td>
+          </tr>
+          <tr>
+            <td>EVT-104</td>
+            <td>Healthcare Innovation Summit</td>
+            <td>Medical & Science</td>
+            <td>Dec 12, 2026 - 10:00 AM</td>
+            <td>City Center Exhibition Hall</td>
+            <td>600 Attendees</td>
+            <td><a href="login.html" class="link-green">Book Seat</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- User Portals Section -->
+    <section class="card">
+      <h2>System Access Portals</h2>
+      <p>Select your user role to access registrations or sign in to your portal dashboard:</p>
+
+      <div class="row">
+        <div class="col-25">
+          <div class="service-box text-center">
+            <h3>Customer</h3>
+            <p>Browse events, purchase tickets, and review your booking history.</p>
+            <a href="Regcustomer.html" class="btn-green">Register</a>
+          </div>
+        </div>
+
+        <div class="col-25">
+          <div class="service-box text-center">
+            <h3>Organizer</h3>
+            <p>Publish events, manage schedules, and coordinate ticket sales.</p>
+            <a href="OrgRegistration.html" class="btn-green">Register</a>
+          </div>
+        </div>
+
+        <div class="col-25">
+          <div class="service-box text-center">
+            <h3>Manager</h3>
+            <p>Oversee logistics, venue reservations, and support personnel.</p>
+            <a href="ManagerReg.html" class="btn-green">Register</a>
+          </div>
+        </div>
+
+        <div class="col-25">
+          <div class="service-box text-center">
+            <h3>Admin</h3>
+            <p>System configuration, security auditing, and user approval.</p>
+            <a href="admin.html" class="btn-green">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 15px;">
+        <p>Already have an account? <a href="login.html" class="link-green">Click here to Login</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Standard Dark Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Event Management System. All rights reserved.</p>
+    <p>
+      <a href="home.html">Home</a> | 
+      <a href="login.html">Login</a> | 
+      <a href="Regcustomer.html">Customer Registration</a> | 
+      <a href="OrgRegistration.html">Organizer Registration</a> | 
+      <a href="ManagerReg.html">Manager Registration</a> | 
+      <a href="admin.html">Admin Registration</a>
+    </p>
+    <p class="text-muted">Designed according to official W3Schools HTML &amp; CSS Tutorial Standards</p>
+  </footer>
+
+</body>
+</html>

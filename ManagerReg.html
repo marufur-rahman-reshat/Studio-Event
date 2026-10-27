@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Registration - Event Management System</title>
+  <!-- Single external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Banner -->
+  <header class="header">
+    <h1>Event Management System</h1>
+    <p>Event Operations &amp; Facility Manager Registration</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Regcustomer.html">Customer Register</a></li>
+      <li><a href="OrgRegistration.html">Organizer Register</a></li>
+      <li><a class="active" href="ManagerReg.html">Manager Register</a></li>
+      <li><a href="admin.html">Admin Register</a></li>
+      <li class="right"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sub-navigation between registration types -->
+  <div class="subnav">
+    <span><strong>Registration Portals:</strong></span>
+    <a href="Regcustomer.html">Customer</a>
+    <a href="OrgRegistration.html">Organizer</a>
+    <a href="ManagerReg.html" class="active-sub">Manager</a>
+    <a href="admin.html">Administrator</a>
+  </div>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Manager Registration Card -->
+    <section class="card">
+      <h2>Manager Account Registration</h2>
+      <p>Register as a certified event or facility manager to oversee venues, coordinate ground staff, and supervise vendors.</p>
+
+      <form action="#" method="post">
+
+        <!-- Manager Personal & Staff Details -->
+        <h3>1. Manager Profile Information</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="mgr-fullname">Full Name: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="mgr-fullname" 
+              name="managerFullName" 
+              placeholder="e.g. David Richardson" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="mgr-staffid">Staff / Management ID: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="mgr-staffid" 
+              name="managerStaffID" 
+              placeholder="e.g. MGR-4501" 
+              required
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="mgr-email">Official Manager Email: <span class="required-star">*</span></label>
+            <input 
+              type="email" 
+              id="mgr-email" 
+              name="managerEmail" 
+              placeholder="e.g. d.richardson@eventvenue.com" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="mgr-phone">Direct Contact Number: <span class="required-star">*</span></label>
+            <input 
+              type="tel" 
+              id="mgr-phone" 
+              name="managerPhone" 
+              placeholder="e.g. +1 (555) 789-0123" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Operational Assignment & Experience -->
+        <h3>2. Operational Domain &amp; Experience</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="mgr-domain">Assigned Operational Area: <span class="required-star">*</span></label>
+            <select id="mgr-domain" name="managementDomain" required>
+              <option value="">-- Select Operational Specialization --</option>
+              <option value="Venue Logistics & Facilities">Venue Logistics &amp; Facilities</option>
+              <option value="Hospitality & VIP Guest Catering">Hospitality &amp; VIP Guest Catering</option>
+              <option value="Audio/Visual & Stage Production">Audio/Visual &amp; Stage Production</option>
+              <option value="Crowd Management & Event Safety">Crowd Management &amp; Event Safety</option>
+              <option value="Box Office & Ticket Gate Control">Box Office &amp; Ticket Gate Control</option>
+              <option value="Vendor & Supplier Relations">Vendor &amp; Supplier Relations</option>
+            </select>
+          </div>
+
+          <div class="col-50-last">
+            <label for="mgr-experience">Years of Event Industry Experience: <span class="required-star">*</span></label>
+            <input 
+              type="number" 
+              id="mgr-experience" 
+              name="yearsExperience" 
+              min="0" 
+              max="50" 
+              placeholder="e.g. 5" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Shift Availability Radio Buttons -->
+        <label>Shift &amp; Duty Availability: <span class="required-star">*</span></label>
+        <div class="radio-group">
+          <label class="radio-item" for="shift-day">
+            <input type="radio" id="shift-day" name="shiftPreference" value="Day Shift" required>
+            Morning / Day Shift
+          </label>
+          <label class="radio-item" for="shift-evening">
+            <input type="radio" id="shift-evening" name="shiftPreference" value="Evening Shift" required>
+            Evening / Night Shift
+          </label>
+          <label class="radio-item" for="shift-flexible">
+            <input type="radio" id="shift-flexible" name="shiftPreference" value="Flexible 24/7" checked required>
+            Flexible / Event-Specific On Call
+          </label>
+        </div>
+
+        <!-- Emergency Contact -->
+        <h3>3. Emergency Contact Details</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="mgr-emg-name">Emergency Contact Person: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="mgr-emg-name" 
+              name="emergencyName" 
+              placeholder="e.g. Sarah Richardson" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="mgr-emg-phone">Emergency Contact Phone: <span class="required-star">*</span></label>
+            <input 
+              type="tel" 
+              id="mgr-emg-phone" 
+              name="emergencyPhone" 
+              placeholder="e.g. +1 (555) 998-1122" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Security Password -->
+        <h3>4. Security Credentials</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="mgr-password">Create Password: <span class="required-star">*</span></label>
+            <input 
+              type="password" 
+              id="mgr-password" 
+              name="mgrPassword" 
+              placeholder="Minimum 8 characters..." 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="mgr-confirm-password">Confirm Password: <span class="required-star">*</span></label>
+            <input 
+              type="password" 
+              id="mgr-confirm-password" 
+              name="mgrConfirmPassword" 
+              placeholder="Re-enter password..." 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Agreement Checkbox -->
+        <div class="checkbox-group">
+          <label class="checkbox-item" for="mgr-terms">
+            <input type="checkbox" id="mgr-terms" name="managerTerms" value="agreed" required>
+            I agree to uphold event venue safety regulations, duty reporting protocols, and emergency action plans. <span class="required-star">*</span>
+          </label>
+        </div>
+
+        <!-- Form Action Buttons -->
+        <div class="button-row">
+          <input type="submit" value="Register Manager Account" class="btn-submit">
+          <input type="reset" value="Clear Form" class="btn-reset">
+        </div>
+
+      </form>
+
+      <div style="margin-top: 20px;">
+        <p>Already registered as a manager? <a href="login.html" class="link-green">Sign in here</a></p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Standard Dark Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Event Management System. All rights reserved.</p>
+    <p>
+      <a href="home.html">Home</a> | 
+      <a href="login.html">Login</a> | 
+      <a href="Regcustomer.html">Customer Registration</a> | 
+      <a href="OrgRegistration.html">Organizer Registration</a> | 
+      <a href="ManagerReg.html">Manager Registration</a> | 
+      <a href="admin.html">Admin Registration</a>
+    </p>
+    <p class="text-muted">Designed according to official W3Schools HTML &amp; CSS Tutorial Standards</p>
+  </footer>
+
+</body>
+</html>

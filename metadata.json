@@ -1,0 +1,7 @@
+{
+  "name": "Event Management System",
+  "description": "A beginner-friendly multi-page Event Management System built with pure HTML5 and W3Schools styling standards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

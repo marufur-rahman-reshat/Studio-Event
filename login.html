@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Event Management System</title>
+  <!-- Link to the single external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Banner -->
+  <header class="header">
+    <h1>Event Management System</h1>
+    <p>User Authentication &amp; Access Portal</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Regcustomer.html">Customer Register</a></li>
+      <li><a href="OrgRegistration.html">Organizer Register</a></li>
+      <li><a href="ManagerReg.html">Manager Register</a></li>
+      <li><a href="admin.html">Admin Register</a></li>
+      <li class="right"><a class="active" href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Login Form Card -->
+    <section class="card" style="max-width: 580px; margin: 30px auto;">
+      <h2>User Login</h2>
+      <p>Please select your system role and enter your login credentials.</p>
+
+      <!-- HTML5 Form according to W3Schools standards -->
+      <form action="#" method="post">
+
+        <!-- 1. Role Selection using Radio Buttons -->
+        <label>Select User Role: <span class="required-star">*</span></label>
+        <div class="radio-group">
+          <label class="radio-item" for="role-admin">
+            <input type="radio" id="role-admin" name="userRole" value="Admin" required>
+            Admin
+          </label>
+          <label class="radio-item" for="role-customer">
+            <input type="radio" id="role-customer" name="userRole" value="Customer" checked required>
+            Customer
+          </label>
+          <label class="radio-item" for="role-organizer">
+            <input type="radio" id="role-organizer" name="userRole" value="Organizer" required>
+            Organizer
+          </label>
+          <label class="radio-item" for="role-manager">
+            <input type="radio" id="role-manager" name="userRole" value="Manager" required>
+            Manager
+          </label>
+        </div>
+
+        <!-- 2. Username / Email Input -->
+        <label for="user-login">Username or Email Address: <span class="required-star">*</span></label>
+        <input 
+          type="text" 
+          id="user-login" 
+          name="userLogin" 
+          placeholder="Enter your registered username or email..." 
+          required
+        >
+
+        <!-- 3. Password Input -->
+        <label for="user-password">Password: <span class="required-star">*</span></label>
+        <input 
+          type="password" 
+          id="user-password" 
+          name="userPassword" 
+          placeholder="Enter your password..." 
+          required
+        >
+
+        <!-- 4. Remember Me Checkbox -->
+        <div class="checkbox-group">
+          <label class="checkbox-item" for="remember-me">
+            <input type="checkbox" id="remember-me" name="rememberMe" value="yes">
+            Remember my credentials on this device
+          </label>
+        </div>
+
+        <!-- 5. Action Buttons (Submit & Reset) -->
+        <div class="button-row">
+          <input type="submit" value="Login" class="btn-submit">
+          <input type="reset" value="Clear" class="btn-reset">
+        </div>
+
+      </form>
+
+      <!-- Helpful Registration Navigation Links -->
+      <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #eeeeee;">
+        <p><strong>Don't have an account yet?</strong> Register below:</p>
+        <ul style="padding-left: 20px; line-height: 1.8;">
+          <li><a href="Regcustomer.html" class="link-green">Register as a Customer</a> (Book tickets &amp; attend events)</li>
+          <li><a href="OrgRegistration.html" class="link-green">Register as an Organizer</a> (Host &amp; manage events)</li>
+          <li><a href="ManagerReg.html" class="link-green">Register as an Event Manager</a> (Coordinate venues &amp; staff)</li>
+          <li><a href="admin.html" class="link-green">Register as a System Admin</a> (Administrator access)</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Standard Dark Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Event Management System. All rights reserved.</p>
+    <p>
+      <a href="home.html">Home</a> | 
+      <a href="login.html">Login</a> | 
+      <a href="Regcustomer.html">Customer Registration</a> | 
+      <a href="OrgRegistration.html">Organizer Registration</a> | 
+      <a href="ManagerReg.html">Manager Registration</a> | 
+      <a href="admin.html">Admin Registration</a>
+    </p>
+    <p class="text-muted">Designed according to official W3Schools HTML &amp; CSS Tutorial Standards</p>
+  </footer>
+
+</body>
+</html>

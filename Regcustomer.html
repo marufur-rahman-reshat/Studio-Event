@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Registration - Event Management System</title>
+  <!-- Single external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Banner -->
+  <header class="header">
+    <h1>Event Management System</h1>
+    <p>Attendee &amp; Customer Portal</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a class="active" href="Regcustomer.html">Customer Register</a></li>
+      <li><a href="OrgRegistration.html">Organizer Register</a></li>
+      <li><a href="ManagerReg.html">Manager Register</a></li>
+      <li><a href="admin.html">Admin Register</a></li>
+      <li class="right"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sub-navigation between registration types -->
+  <div class="subnav">
+    <span><strong>Registration Portals:</strong></span>
+    <a href="Regcustomer.html" class="active-sub">Customer</a>
+    <a href="OrgRegistration.html">Organizer</a>
+    <a href="ManagerReg.html">Manager</a>
+    <a href="admin.html">Administrator</a>
+  </div>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Customer Registration Card -->
+    <section class="card">
+      <h2>Customer &amp; Attendee Registration</h2>
+      <p>Create your attendee account to book tickets, receive invitations, reserve VIP seating, and track your events.</p>
+
+      <form action="#" method="post">
+
+        <!-- Personal Information Section -->
+        <h3>1. Personal Details</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="cust-firstname">First Name: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="cust-firstname" 
+              name="firstName" 
+              placeholder="e.g. John" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="cust-lastname">Last Name: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="cust-lastname" 
+              name="lastName" 
+              placeholder="e.g. Smith" 
+              required
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="cust-email">Email Address: <span class="required-star">*</span></label>
+            <input 
+              type="email" 
+              id="cust-email" 
+              name="customerEmail" 
+              placeholder="e.g. john.smith@example.com" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="cust-phone">Mobile Phone Number: <span class="required-star">*</span></label>
+            <input 
+              type="tel" 
+              id="cust-phone" 
+              name="customerPhone" 
+              placeholder="e.g. +1 (555) 345-6789" 
+              required
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="cust-dob">Date of Birth: <span class="required-star">*</span></label>
+            <input 
+              type="date" 
+              id="cust-dob" 
+              name="dateOfBirth" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="cust-city">City &amp; Country: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="cust-city" 
+              name="cityCountry" 
+              placeholder="e.g. Chicago, USA" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Gender Selection (Radio Buttons) -->
+        <label>Gender: <span class="required-star">*</span></label>
+        <div class="radio-group">
+          <label class="radio-item" for="gender-male">
+            <input type="radio" id="gender-male" name="gender" value="Male" required>
+            Male
+          </label>
+          <label class="radio-item" for="gender-female">
+            <input type="radio" id="gender-female" name="gender" value="Female" required>
+            Female
+          </label>
+          <label class="radio-item" for="gender-other">
+            <input type="radio" id="gender-other" name="gender" value="Other" required>
+            Other
+          </label>
+          <label class="radio-item" for="gender-na">
+            <input type="radio" id="gender-na" name="gender" value="Prefer Not to Say" checked required>
+            Prefer not to say
+          </label>
+        </div>
+
+        <!-- Event Interests (Checkboxes) -->
+        <h3>2. Event Interests &amp; Preferences</h3>
+        <label>Select Event Categories You Enjoy:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-item" for="cat-tech">
+            <input type="checkbox" id="cat-tech" name="interests" value="Technology & Conferences" checked>
+            Technology &amp; Business Conferences
+          </label>
+          <br>
+          <label class="checkbox-item" for="cat-music">
+            <input type="checkbox" id="cat-music" name="interests" value="Music Festivals & Concerts" checked>
+            Live Music Festivals &amp; Concerts
+          </label>
+          <br>
+          <label class="checkbox-item" for="cat-theater">
+            <input type="checkbox" id="cat-theater" name="interests" value="Theater & Arts">
+            Theater, Comedy &amp; Performing Arts
+          </label>
+          <br>
+          <label class="checkbox-item" for="cat-food">
+            <input type="checkbox" id="cat-food" name="interests" value="Food & Festivals">
+            Food &amp; Wine Festivals
+          </label>
+          <br>
+          <label class="checkbox-item" for="cat-sports">
+            <input type="checkbox" id="cat-sports" name="interests" value="Sports & Fitness">
+            Sports Tournaments &amp; Marathons
+          </label>
+        </div>
+
+        <!-- Security Credentials -->
+        <h3>3. Account Password</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="cust-password">Password: <span class="required-star">*</span></label>
+            <input 
+              type="password" 
+              id="cust-password" 
+              name="custPassword" 
+              placeholder="Minimum 6 characters..." 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="cust-confirm-password">Confirm Password: <span class="required-star">*</span></label>
+            <input 
+              type="password" 
+              id="cust-confirm-password" 
+              name="custConfirmPassword" 
+              placeholder="Repeat your password..." 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Notifications & Agreement -->
+        <div class="checkbox-group">
+          <label class="checkbox-item" for="cust-newsletter">
+            <input type="checkbox" id="cust-newsletter" name="newsletter" value="subscribed" checked>
+            Send me upcoming event alerts, early-bird ticket discounts, and special invitations.
+          </label>
+          <br>
+          <label class="checkbox-item" for="cust-terms">
+            <input type="checkbox" id="cust-terms" name="custTerms" value="accepted" required>
+            I agree to the Event Management System Terms of Service and Privacy Policy. <span class="required-star">*</span>
+          </label>
+        </div>
+
+        <!-- Form Action Buttons -->
+        <div class="button-row">
+          <input type="submit" value="Register Account" class="btn-submit">
+          <input type="reset" value="Clear Form" class="btn-reset">
+        </div>
+
+      </form>
+
+      <div style="margin-top: 20px;">
+        <p>Already have an account? <a href="login.html" class="link-green">Sign in here</a></p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Standard Dark Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Event Management System. All rights reserved.</p>
+    <p>
+      <a href="home.html">Home</a> | 
+      <a href="login.html">Login</a> | 
+      <a href="Regcustomer.html">Customer Registration</a> | 
+      <a href="OrgRegistration.html">Organizer Registration</a> | 
+      <a href="ManagerReg.html">Manager Registration</a> | 
+      <a href="admin.html">Admin Registration</a>
+    </p>
+    <p class="text-muted">Designed according to official W3Schools HTML &amp; CSS Tutorial Standards</p>
+  </footer>
+
+</body>
+</html>

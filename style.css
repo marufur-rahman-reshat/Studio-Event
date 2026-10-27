@@ -1,0 +1,477 @@
+/* 
+  Event Management System - Main Stylesheet
+  W3Schools Minimalist Beginner Style
+  All styles follow clean, standard W3Schools tutorial conventions.
+*/
+
+/* 1. Global Box Sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. Body & Typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* 3. Header Banner */
+.header {
+  background-color: #04AA6D;
+  color: #ffffff;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* 4. Navigation Bar (W3Schools Classic Top Navigation) */
+.navbar {
+  background-color: #333333;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Change link color on hover */
+.navbar li a:hover {
+  background-color: #45a049;
+  color: #ffffff;
+}
+
+/* Active / Current link */
+.navbar li a.active {
+  background-color: #04AA6D;
+  color: #ffffff;
+}
+
+/* Align right side nav links */
+.navbar li.right {
+  float: right;
+}
+
+/* Sub-navigation for Registration types */
+.subnav {
+  background-color: #e4e4e4;
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.subnav a {
+  display: inline-block;
+  color: #333333;
+  text-decoration: none;
+  padding: 6px 14px;
+  margin: 2px 4px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.subnav a:hover {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border-color: #04AA6D;
+}
+
+.subnav a.active-sub {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border-color: #04AA6D;
+  font-weight: bold;
+}
+
+/* 5. Main Content Layout Containers */
+.container {
+  max-width: 960px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.card h2 {
+  color: #333333;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #04AA6D;
+}
+
+.card h3 {
+  color: #04AA6D;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* 6. Form Styling (W3Schools Form Standards) */
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  color: #333333;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=date],
+input[type=number],
+input[type=url],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=date]:focus,
+input[type=number]:focus,
+input[type=url]:focus,
+select:focus,
+textarea:focus {
+  border-color: #04AA6D;
+  outline: none;
+  background-color: #fafffa;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Radio and Checkbox Styling */
+.radio-group,
+.checkbox-group {
+  background-color: #fafafa;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.radio-item,
+.checkbox-item {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  margin-right: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* 7. Action Buttons */
+.button-row {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eeeeee;
+}
+
+/* Primary Submit Button: W3Schools Green */
+input[type=submit],
+button.btn-submit,
+.btn-green {
+  background-color: #04AA6D;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+input[type=submit]:hover,
+button.btn-submit:hover,
+.btn-green:hover {
+  background-color: #45a049;
+}
+
+/* Reset / Danger Button: W3Schools Red */
+input[type=reset],
+button.btn-reset,
+.btn-red {
+  background-color: #f44336;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+input[type=reset]:hover,
+button.btn-reset:hover,
+.btn-red:hover {
+  background-color: #da190b;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #555555;
+  color: #ffffff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background-color: #333333;
+}
+
+/* 8. Responsive Two-Column Form Layout */
+.row {
+  display: block;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-50 {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+}
+
+.col-50-last {
+  float: left;
+  width: 50%;
+  padding-left: 15px;
+}
+
+.col-33 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* 9. Informational Notes & Alert Boxes */
+.notice {
+  background-color: #e7f3fe;
+  border-left: 6px solid #2196F3;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.notice-success {
+  background-color: #ddffdd;
+  border-left: 6px solid #04AA6D;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.notice-warning {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+/* 10. Tables (W3Schools Table Standards) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+}
+
+th {
+  background-color: #04AA6D;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* 11. Feature & Service Cards */
+.service-box {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-top: 4px solid #04AA6D;
+  border-radius: 4px;
+  padding: 18px;
+  margin-bottom: 15px;
+  min-height: 180px;
+}
+
+.service-box h3 {
+  margin-top: 0;
+  color: #04AA6D;
+}
+
+/* 12. Helper classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-muted {
+  color: #777777;
+  font-size: 13px;
+}
+
+.link-green {
+  color: #04AA6D;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-green:hover {
+  text-decoration: underline;
+}
+
+.required-star {
+  color: #f44336;
+}
+
+/* 13. Footer (W3Schools Standard Dark Footer) */
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 6px 0;
+}
+
+.footer a {
+  color: #04AA6D;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #45a049;
+}
+
+/* 14. Simple Responsive Behavior */
+@media screen and (max-width: 768px) {
+  .col-50,
+  .col-50-last,
+  .col-33,
+  .col-25 {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .navbar li,
+  .navbar li.right {
+    float: none;
+  }
+  
+  .navbar li a {
+    text-align: left;
+  }
+
+  input[type=reset],
+  button.btn-reset,
+  .btn-red {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

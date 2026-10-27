@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizer Registration - Event Management System</title>
+  <!-- Single external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Banner -->
+  <header class="header">
+    <h1>Event Management System</h1>
+    <p>Event Host &amp; Organizer Registration</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Regcustomer.html">Customer Register</a></li>
+      <li><a class="active" href="OrgRegistration.html">Organizer Register</a></li>
+      <li><a href="ManagerReg.html">Manager Register</a></li>
+      <li><a href="admin.html">Admin Register</a></li>
+      <li class="right"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sub-navigation between registration types -->
+  <div class="subnav">
+    <span><strong>Registration Portals:</strong></span>
+    <a href="Regcustomer.html">Customer</a>
+    <a href="OrgRegistration.html" class="active-sub">Organizer</a>
+    <a href="ManagerReg.html">Manager</a>
+    <a href="admin.html">Administrator</a>
+  </div>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Organizer Registration Card -->
+    <section class="card">
+      <h2>Organizer Account Registration</h2>
+      <p>Register as an event organizer to create, host, sell tickets for, and promote public and private events.</p>
+
+      <form action="#" method="post">
+
+        <!-- Organization / Agency Information -->
+        <h3>1. Agency &amp; Business Information</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="org-company-name">Organization / Agency Name: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="org-company-name" 
+              name="companyName" 
+              placeholder="e.g. Pinnacle Event Productions LLC" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="org-contact-person">Primary Contact Person Name: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="org-contact-person" 
+              name="contactPerson" 
+              placeholder="e.g. Marcus Sterling" 
+              required
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="org-email">Business Email Address: <span class="required-star">*</span></label>
+            <input 
+              type="email" 
+              id="org-email" 
+              name="orgEmail" 
+              placeholder="e.g. contact@pinnacleevents.com" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="org-phone">Business Telephone: <span class="required-star">*</span></label>
+            <input 
+              type="tel" 
+              id="org-phone" 
+              name="orgPhone" 
+              placeholder="e.g. +1 (555) 987-6543" 
+              required
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="org-website">Official Website URL:</label>
+            <input 
+              type="url" 
+              id="org-website" 
+              name="orgWebsite" 
+              placeholder="e.g. https://www.pinnacleevents.com"
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="org-taxid">Business Registration / Tax ID: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="org-taxid" 
+              name="taxID" 
+              placeholder="e.g. EIN-12-3456789" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Event Specialization -->
+        <h3>2. Event Specialization &amp; Scope</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="org-category">Primary Event Specialty: <span class="required-star">*</span></label>
+            <select id="org-category" name="eventSpecialty" required>
+              <option value="">-- Select Event Specialty --</option>
+              <option value="Corporate & Tech Conferences">Corporate &amp; Tech Conferences</option>
+              <option value="Weddings & Social Celebrations">Weddings &amp; Social Celebrations</option>
+              <option value="Music Festivals & Concerts">Music Festivals &amp; Concerts</option>
+              <option value="Trade Shows & Expos">Trade Shows &amp; Expos</option>
+              <option value="Sports & Esports Tournaments">Sports &amp; Esports Tournaments</option>
+              <option value="Charity & Community Galas">Charity &amp; Community Galas</option>
+            </select>
+          </div>
+
+          <div class="col-50-last">
+            <label for="org-annual-events">Estimated Events Hosted Per Year: <span class="required-star">*</span></label>
+            <select id="org-annual-events" name="annualEvents" required>
+              <option value="">-- Select Annual Frequency --</option>
+              <option value="1 - 5 events">1 - 5 events</option>
+              <option value="6 - 15 events">6 - 15 events</option>
+              <option value="16 - 30 events">16 - 30 events</option>
+              <option value="30+ events per year">30+ events per year</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="org-address">Headquarters / Office Address: <span class="required-star">*</span></label>
+        <textarea 
+          id="org-address" 
+          name="officeAddress" 
+          placeholder="Enter complete street address, suite number, city, state, and postal code..." 
+          required
+        ></textarea>
+
+        <!-- Account Security -->
+        <h3>3. Account Security Credentials</h3>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="org-password">Create Account Password: <span class="required-star">*</span></label>
+            <input 
+              type="password" 
+              id="org-password" 
+              name="orgPassword" 
+              placeholder="Minimum 8 characters with numbers..." 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="org-confirm-password">Confirm Password: <span class="required-star">*</span></label>
+            <input 
+              type="password" 
+              id="org-confirm-password" 
+              name="orgConfirmPassword" 
+              placeholder="Re-type your password..." 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Terms and Conditions Agreement -->
+        <div class="checkbox-group">
+          <label class="checkbox-item" for="org-terms">
+            <input type="checkbox" id="org-terms" name="termsAgreement" value="agreed" required>
+            I confirm that our organization will adhere to ticketing guidelines, venue safety regulations, and our terms of service.
+          </label>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-row">
+          <input type="submit" value="Register as Organizer" class="btn-submit">
+          <input type="reset" value="Reset Form" class="btn-reset">
+        </div>
+
+      </form>
+
+      <div style="margin-top: 20px;">
+        <p>Already an organizer? <a href="login.html" class="link-green">Sign in here</a></p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Standard Dark Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Event Management System. All rights reserved.</p>
+    <p>
+      <a href="home.html">Home</a> | 
+      <a href="login.html">Login</a> | 
+      <a href="Regcustomer.html">Customer Registration</a> | 
+      <a href="OrgRegistration.html">Organizer Registration</a> | 
+      <a href="ManagerReg.html">Manager Registration</a> | 
+      <a href="admin.html">Admin Registration</a>
+    </p>
+    <p class="text-muted">Designed according to official W3Schools HTML &amp; CSS Tutorial Standards</p>
+  </footer>
+
+</body>
+</html>

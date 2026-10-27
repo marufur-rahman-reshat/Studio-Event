@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Registration - Event Management System</title>
+  <!-- Single external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Banner -->
+  <header class="header">
+    <h1>Event Management System</h1>
+    <p>Administrative Control Panel &amp; System Governance</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Regcustomer.html">Customer Register</a></li>
+      <li><a href="OrgRegistration.html">Organizer Register</a></li>
+      <li><a href="ManagerReg.html">Manager Register</a></li>
+      <li><a class="active" href="admin.html">Admin Register</a></li>
+      <li class="right"><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sub-navigation between registration types -->
+  <div class="subnav">
+    <span><strong>Registration Portals:</strong></span>
+    <a href="Regcustomer.html">Customer</a>
+    <a href="OrgRegistration.html">Organizer</a>
+    <a href="ManagerReg.html">Manager</a>
+    <a href="admin.html" class="active-sub">Administrator</a>
+  </div>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Admin Registration Form Card -->
+    <section class="card">
+      <h2>System Administrator Registration</h2>
+      <p>Register a new administrative account with oversight privileges for the Event Management System.</p>
+
+      <div class="notice">
+        <strong>Security Notice:</strong> Administrative accounts require an internal authorization security key issued by the IT Security Department.
+      </div>
+
+      <form action="#" method="post">
+
+        <!-- Two Column Layout for Basic Details -->
+        <div class="row">
+          <div class="col-50">
+            <label for="admin-fullname">Full Name: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="admin-fullname" 
+              name="adminFullName" 
+              placeholder="e.g. Eleanor Vance" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="admin-email">Official Admin Email: <span class="required-star">*</span></label>
+            <input 
+              type="email" 
+              id="admin-email" 
+              name="adminEmail" 
+              placeholder="e.g. admin.vance@eventsystem.com" 
+              required
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="admin-phone">Direct Phone Number: <span class="required-star">*</span></label>
+            <input 
+              type="tel" 
+              id="admin-phone" 
+              name="adminPhone" 
+              placeholder="e.g. +1 (555) 234-5678" 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="admin-id">Admin Staff / Employee ID: <span class="required-star">*</span></label>
+            <input 
+              type="text" 
+              id="admin-id" 
+              name="adminID" 
+              placeholder="e.g. ADM-8902" 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Administrative Department Selection -->
+        <label for="admin-dept">Department: <span class="required-star">*</span></label>
+        <select id="admin-dept" name="adminDepartment" required>
+          <option value="">-- Select Administrative Department --</option>
+          <option value="IT & Infrastructure">IT &amp; Infrastructure</option>
+          <option value="Operations & Logistics">Operations &amp; Logistics</option>
+          <option value="Security & Compliance">Security &amp; Compliance</option>
+          <option value="Finance & Audits">Finance &amp; Audits</option>
+          <option value="Customer Relations">Customer Relations</option>
+        </select>
+
+        <!-- Access Level Radio Buttons -->
+        <label>System Clearance Level: <span class="required-star">*</span></label>
+        <div class="radio-group">
+          <label class="radio-item" for="clearance-super">
+            <input type="radio" id="clearance-super" name="adminClearance" value="Super Administrator" required>
+            Super Administrator (Full System Control)
+          </label>
+          <br>
+          <label class="radio-item" for="clearance-auditor">
+            <input type="radio" id="clearance-auditor" name="adminClearance" value="System Auditor" checked required>
+            System Auditor (Read &amp; Review Logs)
+          </label>
+          <br>
+          <label class="radio-item" for="clearance-moderator">
+            <input type="radio" id="clearance-moderator" name="adminClearance" value="Event Moderator" required>
+            Event Moderator (Content &amp; Event Approval)
+          </label>
+        </div>
+
+        <!-- Security Passkey -->
+        <label for="admin-authkey">System Authorization Key: <span class="required-star">*</span></label>
+        <input 
+          type="password" 
+          id="admin-authkey" 
+          name="adminAuthKey" 
+          placeholder="Enter the secure department authorization key..." 
+          required
+        >
+
+        <!-- Two Column Password Setup -->
+        <div class="row">
+          <div class="col-50">
+            <label for="admin-password">Password: <span class="required-star">*</span></label>
+            <input 
+              type="password" 
+              id="admin-password" 
+              name="adminPassword" 
+              placeholder="Minimum 8 characters..." 
+              required
+            >
+          </div>
+          <div class="col-50-last">
+            <label for="admin-confirm-password">Confirm Password: <span class="required-star">*</span></label>
+            <input 
+              type="password" 
+              id="admin-confirm-password" 
+              name="adminConfirmPassword" 
+              placeholder="Repeat your password..." 
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Security Recovery Question -->
+        <label for="admin-security-question">Security Recovery Question: <span class="required-star">*</span></label>
+        <select id="admin-security-question" name="securityQuestion" required>
+          <option value="">-- Choose a security question --</option>
+          <option value="What was the name of your first elementary school?">What was the name of your first elementary school?</option>
+          <option value="In what city was your first office job located?">In what city was your first office job located?</option>
+          <option value="What was your childhood nickname?">What was your childhood nickname?</option>
+          <option value="What is your favorite book or movie?">What is your favorite book or movie?</option>
+        </select>
+
+        <label for="admin-security-answer">Security Answer: <span class="required-star">*</span></label>
+        <input 
+          type="text" 
+          id="admin-security-answer" 
+          name="securityAnswer" 
+          placeholder="Provide your secret answer..." 
+          required
+        >
+
+        <!-- Compliance Checkbox -->
+        <div class="checkbox-group">
+          <label class="checkbox-item" for="admin-agreement">
+            <input type="checkbox" id="admin-agreement" name="adminAgreement" value="agreed" required>
+            I certify that I am authorized by my organization to hold administrative access, and I agree to the System Confidentiality Protocol.
+          </label>
+        </div>
+
+        <!-- Form Action Buttons -->
+        <div class="button-row">
+          <input type="submit" value="Register Admin Account" class="btn-submit">
+          <input type="reset" value="Reset Form" class="btn-reset">
+        </div>
+
+      </form>
+
+      <div style="margin-top: 20px;">
+        <p>Already an administrator? <a href="login.html" class="link-green">Sign in here</a></p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Standard Dark Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Event Management System. All rights reserved.</p>
+    <p>
+      <a href="home.html">Home</a> | 
+      <a href="login.html">Login</a> | 
+      <a href="Regcustomer.html">Customer Registration</a> | 
+      <a href="OrgRegistration.html">Organizer Registration</a> | 
+      <a href="ManagerReg.html">Manager Registration</a> | 
+      <a href="admin.html">Admin Registration</a>
+    </p>
+    <p class="text-muted">Designed according to official W3Schools HTML &amp; CSS Tutorial Standards</p>
+  </footer>
+
+</body>
+</html>
