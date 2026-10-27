@@ -131,4 +131,5 @@ This project is open-source and available under the [MIT License](LICENSE). Feel
 
 ---
 
-*Made with ❤️ following clean Web Standards and W3Schools Tutorials.*
+*Made with following clean Web Standards and W3Schools Tutorials.*
+*Made Marufur Rahman Reshat.*
