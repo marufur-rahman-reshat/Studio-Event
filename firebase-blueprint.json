@@ -1,0 +1,69 @@
+{
+  "entities": {
+    "Event": {
+      "title": "Event",
+      "description": "An event managed within the system with linked Google Workspace assets",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "category": { "type": "string", "maxLength": 80 },
+        "date": { "type": "string", "maxLength": 60 },
+        "venue": { "type": "string", "maxLength": 150 },
+        "capacity": { "type": "number" },
+        "organizerId": { "type": "string", "maxLength": 128 },
+        "organizerName": { "type": "string", "maxLength": 100 },
+        "driveFileId": { "type": "string", "maxLength": 128 },
+        "sheetId": { "type": "string", "maxLength": 128 },
+        "formId": { "type": "string", "maxLength": 128 },
+        "createdAt": { "type": "string", "maxLength": 60 },
+        "updatedAt": { "type": "string", "maxLength": 60 }
+      },
+      "required": ["title", "category", "date", "venue", "organizerId"]
+    },
+    "Registration": {
+      "title": "Registration",
+      "description": "An attendee registration record for an event",
+      "type": "object",
+      "properties": {
+        "eventId": { "type": "string", "maxLength": 128 },
+        "eventTitle": { "type": "string", "maxLength": 150 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "userName": { "type": "string", "maxLength": 100 },
+        "userEmail": { "type": "string", "maxLength": 120 },
+        "tickets": { "type": "number" },
+        "createdAt": { "type": "string", "maxLength": 60 }
+      },
+      "required": ["eventId", "userId", "userEmail", "tickets"]
+    },
+    "WorkspaceItem": {
+      "title": "WorkspaceItem",
+      "description": "A Google Drive file, Google Sheet, or Google Form linked to an event",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "type": { "type": "string", "enum": ["drive_file", "sheet", "form"] },
+        "externalId": { "type": "string", "maxLength": 150 },
+        "url": { "type": "string", "maxLength": 300 },
+        "ownerId": { "type": "string", "maxLength": 128 },
+        "eventId": { "type": "string", "maxLength": 128 },
+        "createdAt": { "type": "string", "maxLength": 60 }
+      },
+      "required": ["name", "type", "externalId", "url", "ownerId"]
+    }
+  },
+  "firestore": {
+    "/events/{eventId}": {
+      "schema": { "$ref": "#/entities/Event" },
+      "description": "Collection of events published by organizers"
+    },
+    "/registrations/{registrationId}": {
+      "schema": { "$ref": "#/entities/Registration" },
+      "description": "Collection of attendee event registrations"
+    },
+    "/workspaceItems/{itemId}": {
+      "schema": { "$ref": "#/entities/WorkspaceItem" },
+      "description": "Collection of linked Google Drive, Google Sheets, and Google Forms assets"
+    }
+  }
+}

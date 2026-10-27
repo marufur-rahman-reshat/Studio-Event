@@ -1,0 +1,79 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 1. Global Safety Net: Default-deny all unlisted paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Common primitives
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Test connection document
+    match /test/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // 2. Events Collection
+    match /events/{eventId} {
+      allow read: if true;
+      allow create: if isSignedIn() 
+        && isValidId(eventId)
+        && request.resource.data.organizerId == request.auth.uid
+        && request.resource.data.title is string
+        && request.resource.data.title.size() <= 150
+        && request.resource.data.category is string
+        && request.resource.data.category.size() <= 80;
+      
+      allow update: if isSignedIn()
+        && isValidId(eventId)
+        && resource.data.organizerId == request.auth.uid
+        && request.resource.data.organizerId == resource.data.organizerId;
+
+      allow delete: if isSignedIn()
+        && isValidId(eventId)
+        && resource.data.organizerId == request.auth.uid;
+    }
+
+    // 3. Registrations Collection
+    match /registrations/{registrationId} {
+      allow read: if isSignedIn() 
+        && (resource.data.userId == request.auth.uid);
+      
+      allow create: if isSignedIn()
+        && isValidId(registrationId)
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.eventId is string
+        && request.resource.data.eventId.size() <= 128;
+
+      allow delete: if isSignedIn()
+        && isValidId(registrationId)
+        && resource.data.userId == request.auth.uid;
+    }
+
+    // 4. Workspace Items (Google Drive, Sheets, Forms linked metadata)
+    match /workspaceItems/{itemId} {
+      allow read: if isSignedIn() 
+        && (resource.data.ownerId == request.auth.uid);
+
+      allow create: if isSignedIn()
+        && isValidId(itemId)
+        && request.resource.data.ownerId == request.auth.uid
+        && request.resource.data.name is string
+        && request.resource.data.name.size() <= 150
+        && request.resource.data.type in ['drive_file', 'sheet', 'form'];
+
+      allow delete: if isSignedIn()
+        && isValidId(itemId)
+        && resource.data.ownerId == request.auth.uid;
+    }
+  }
+}
